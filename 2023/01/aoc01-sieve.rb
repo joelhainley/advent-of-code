@@ -21,6 +21,4 @@ end
 first_num = get_first_numeric_char($_)
 last_num = get_first_numeric_char($_.reverse)
 
-line_digits = first_num + last_num
-
 STDOUT.write first_num + last_num + "\n"
