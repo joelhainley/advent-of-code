@@ -5,6 +5,10 @@ Ruby today, and I opted to leverage some ruby fanciness and STDIN / STDOUT to wr
 * aoc01-sieve.rb - locates the two numbers for each line that it receives on STDIN and concats them and sends them out STDOUT
 * aoc01-accumulator - reads from STDIN and sums all numbers it receives in the stream (again one number per line) and emits the result
 
+## running
+
+`cat input.txt | ruby -n aoc01-sieve.rb | ./aoc01-accumulator.rb`
+
 ----
 
 --- Day 1: Trebuchet?! ---
