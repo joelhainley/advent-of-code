@@ -15,10 +15,11 @@ def get_first_numeric_char(input)
       return c
     end
   end
-  raise Exception.new "Unable to locate number in : " + input
+  raise Exception.new "Unable to locate number in : [" + input + "]"
 end
 
 first_num = get_first_numeric_char($_)
 last_num = get_first_numeric_char($_.reverse)
 
 STDOUT.write first_num + last_num + "\n"
+
