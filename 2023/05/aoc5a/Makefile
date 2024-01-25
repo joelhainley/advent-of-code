@@ -8,4 +8,4 @@ install:
 	go install cmd/aoc05-part-a.go
 
 test:
-	go test ./...
+	go test ./... -v

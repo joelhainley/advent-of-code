@@ -9,7 +9,17 @@ type Mapping struct {
 	sourceStart int
 	sourceEnd   int
 	destStart   int
+	destEnd     int
 	mapRange    int
+	offset      int
+}
+
+func NewMapping(input string) Mapping {
+	var mapping Mapping
+
+	mapping.initialize(input)
+
+	return mapping
 }
 
 func (m *Mapping) initialize(input string) {
@@ -28,6 +38,8 @@ func (m *Mapping) initialize(input string) {
 	m.mapRange = value
 
 	m.sourceEnd = m.sourceStart + m.mapRange
+	m.destEnd = m.destStart + m.mapRange
+	m.offset = m.destStart - m.sourceStart
 }
 
 func (m *Mapping) HasDestination(location int) bool {
